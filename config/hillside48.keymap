@@ -40,13 +40,13 @@
  * | `     |   Q   |   W   |   E   |   R   |   T   |-----------------------------------|   Y   |   U   |   I   |   O   |   P   | BKSPC |
  * | TAB   |   A   |   S   |   D   |   F   |   G   |-----------------------------------|   H   |   J   |   K   |   L   |   ;   | ENTER |
  * | SHIFT |   Z   |   X   |   C   |   V   |   B   | GUI   |-------------------|  ESC  |   N   |   M   |   ,   |   .   |   /   | SHIFT |
- * ----------------| CAPS  |-------|  CTRL |  ALT  | SPACE |  Sym  |---|  Num  | SPACE |  ALT  |   '   |-------|  GUI  |----------------
+ * ----------------| CAPS  |-------|  CTRL |  ALT  | SPACE |  Sym  |---|  Num  | SPACE |  ALT  |   '   |-------|Play/P |----------------
  */
                         bindings = <
 &kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
 &kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  ENTER  
 &kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  LGUI                                          &kp   ESC     &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
-                            &kp  CAPS                   &kp  LCTRL    &kp  LALT     &kp  SPACE    &mo  SYM_L             &mo  NUM_L    &kp  SPACE    &kp  LALT     &kp  SQT                    &kp  RGUI   
+                            &kp  CAPS                   &kp  LCTRL    &kp  LALT     &kp  SPACE    &mo  SYM_L             &mo  NUM_L    &kp  SPACE    &kp  LALT     &kp  SQT                    &kp  C_PP   
                         >;
 
                         sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp PG_UP PG_DN>;
@@ -112,7 +112,7 @@
  * | F1    |  F2   | Home  |  Up   |  End  |  F10  |-----------------------------------|   /   |   7   |   8   |   9   |   -   | BSPC  |
  * | F3    |  F4   | Left  | Down  | Right |  F11  |-----------------------------------|   *   |   4   |   5   |   6   |   +   | ENTER |
  * | F5    |  F6   |  F7   |  F8   |  F9   |  F12  |  INS  |-------------------| MUTE  |   ,   |   1   |   2   |   3   |   =   | DELETE|
- * ----------------|       |-------|       |       |       | ADJ_L |---|       |       |       |   0   |-------|Plxy/P |----------------
+ * ----------------|       |-------|       |       |       | ADJ_L |---|       |       |       |   0   |-------|Play/P |----------------
  */
                         bindings = <
 &kp  F1       &kp  F2       &kp  HOME     &kp  UP       &kp  END      &kp  F10                                                                       &kp  SLASH  &kp   N7      &kp   N8      &kp   N9      &kp  MINUS    &trans
