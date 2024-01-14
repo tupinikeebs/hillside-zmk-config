@@ -40,10 +40,10 @@
 &kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  LGUI                                          &kp   ESC     &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
                             &kp  CAPS                   &kp  LCTRL    &kp  LALT     &kp  SPACE    &mo  SYM_L             &mo  NUM_L    &kp  SPACE    &kp  LALT     &kp  SQT                    &kp  RGUI   
                         >;
-			
+
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
-		
+
                 dvorak_layer {
 /* DVORAK
  * -------------------------------------------------------------------------------------------------------------------------------------
@@ -58,10 +58,10 @@
 &kp  LSHFT    &kp  SEMI     &kp  Q        &kp  J        &kp  K        &kp  X        &kp  LGUI                                          &kp   ESC     &kp  B        &kp  M        &kp  W        &kp  V        &kp  Z        &kp  RSHFT
                             &kp  CAPS                   &kp  LCTRL    &kp  LALT     &kp  SPACE    &mo  SYM_L             &mo  NUM_L    &kp  SPACE    &kp  LALT     &kp  SLASH                  &kp  RGUI 
                         >;
-			
+
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
-		
+
                 colemak_layer {
 /* COLEMAK-DH
  * -------------------------------------------------------------------------------------------------------------------------------------
@@ -76,10 +76,10 @@
 &kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V        &kp  LGUI                                          &kp   ESC     &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
                             &kp  CAPS                   &kp  LCTRL    &kp  LALT     &kp  SPACE    &mo  SYM_L             &mo  NUM_L    &kp  SPACE    &kp  LALT     &kp  SQT                    &kp  RGUI   
                         >;
-			
+
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
-		
+
                 sym_layer {
 /* SYM
  * -------------------------------------------------------------------------------------------------------------------------------------
@@ -94,43 +94,43 @@
 &trans        &kp  Undo     &kp  Cut      &kp  Copy     &kp  Paste    &kp  PG_DN    &sk  RALT                                          &kp  K_APP    &kp  UNDER    &kp  PLUS     &kp  LBRC     &kp  RBRC     &kp  PIPE     &trans
                             &trans                      &trans        &trans        &trans        &trans                 &mo  ADJ_L    &trans        &trans        &trans                      &kp  RCTRL    
                         >;
-			
+
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
-		
+
                 num_layer {
-/* NUM   
+/* NUM
  * -------------------------------------------------------------------------------------------------------------------------------------
- * | F11   |   1   |   2   |   3   |   4   |   5   |-----------------------------------|   6   |   7   |   8   |   9   |       | BSPC  |
- * | F12   |  F1   |  F2   |  F3   |  F4   |  F5   |-----------------------------------|VOL UP | Shift | Ctrl  | Alt   | Gui   | ENTER |
- * | Shift |  F6   |  F7   |  F8   |  F9   |  F10  |  INS  |-------------------| MUTE  |VOL DN | Left  |  Up   | Down  | Right | DELETE|
- * ----------------|       |-------|       |       |       | ADJ_L |---|       |       |       |       |-------| CTRL  |----------------
+ * | F1    |  F2   | Home  |  Up   |  End  |  F10  |-----------------------------------|   /   |   7   |   8   |   9   |   -   | BSPC  |
+ * | F3    |  F4   | Left  | Down  | Right |  F11  |-----------------------------------|   *   |   4   |   5   |   6   |   +   | ENTER |
+ * | F5    |  F6   |  F7   |  F8   |  F9   |  F12  |  INS  |-------------------| MUTE  |   ,   |   1   |   2   |   3   |   =   | DELETE|
+ * ----------------|       |-------|       |       |       | ADJ_L |---|       |       |       |   0   |-------|Plxy/P |----------------
  */
                         bindings = <
-&kp  F11      &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5                                                                        &kp   N6      &kp   N7      &kp   N8      &kp   N9      &kp  N0       &trans
-&kp  F12      &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                                        &kp  C_VOL_UP &kp   RSHFT   &kp   RCTRL   &kp   LALT    &kp  RGUI     &trans
-&trans        &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &kp INS                                            &kp  C_MUTE   &kp  C_VOL_DN &kp   LEFT    &kp   UP      &kp   DOWN    &kp  RIGHT    &kp DEL
-                            &trans                      &trans        &trans        &trans        &mo ADJ_L              &trans        &trans        &trans        &trans                      &kp  RCTRL   
+&kp  F1       &kp  F2       &kp  HOME     &kp  UP       &kp  END      &kp  F10                                                                       &kp  SLASH  &kp   N7      &kp   N8      &kp   N9      &kp  MINUS    &trans
+&kp  F3       &kp  F4       &kp  LEFT     &kp  DOWN     &kp  RIGHT    &kp  F11                                                                       &kp  ASTRK  &kp   N4      &kp   N5      &kp   N6      &kp  PLUS     &trans
+&kp  F5       &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F12      &kp INS                                            &kp  C_MUTE   &kp  COMMA  &kp   N1      &kp   N2      &kp   N3      &kp  EQUAL    &kp DEL
+                            &trans                      &trans        &trans        &trans        &mo ADJ_L              &trans        &trans        &trans      &kp   N0                    &kp   C_PP   
                         >;
-			
+
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
-		
+
                 adj_layer {
 /* ADJUST
  * -------------------------------------------------------------------------------------------------------------------------------------
- * |       | QWERTY| DVORAK| COLEMK|       |       |-----------------------------------|       |Prt Scr|       | EP_OFF| EP_ON |       |
+ * |       | QWERTY| DVORAK| COLEMK| NUM   |       |-----------------------------------|       |Prt Scr|       | EP_OFF| EP_ON |       |
  * |       | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |       |       |       |       |
  * | BOOTL | RESET |       |OUT_USB|OUT_BLE|       |BT CLR |-------------------|       |       |       |       |       |       | SHIFT |
  * ----------------|       |-------|       |       |       |       |---|       |       |       |       |-------| CTRL  |----------------
  */
                         bindings = <
-&none         &to  QWERTY_L &to  DVORAK_L &to  COLEMK_L &none         &none                                                                             &none             &kp PRINTSCREEN    &none         &ext_power EP_OFF  &ext_power EP_ON &none
+&none         &to  QWERTY_L &to  DVORAK_L &to  COLEMK_L &to  NUM_L    &none                                                                             &none             &kp PRINTSCREEN    &none         &ext_power EP_OFF  &ext_power EP_ON &none
 &none         &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &none             &none              &none            &none           &none            &none
 &bootloader   &sys_reset    &none         &out OUT_USB  &out OUT_BLE  &none         &bt BT_CLR                                         &none            &none             &none              &none            &none           &none            &trans
                             &trans                      &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans                              &kp  RCTRL   
                         >;
-			
+
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
         };
