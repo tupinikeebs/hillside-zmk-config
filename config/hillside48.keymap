@@ -23,14 +23,6 @@
 #define Paste  LC(V)
 
 / {
-        behaviors {
-                rot_kp: sensor_rotate_kp {
-                        compatible = "zmk,behavior-sensor-rotate-var";
-                        #sensor-binding-cells = <2>;
-                        bindings = <&kp>, <&kp>;
-                };
-        };
-
         keymap {
                 compatible = "zmk,keymap";
 
@@ -49,7 +41,7 @@
                             &kp  CAPS                   &kp  LCTRL    &kp  LALT     &kp  SPACE    &mo  SYM_L             &mo  NUM_L    &kp  SPACE    &kp  LALT     &kp  SQT                    &kp  C_PP   
                         >;
 
-                        sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp PG_UP PG_DN>;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
                 dvorak_layer {
@@ -67,7 +59,7 @@
                             &kp  CAPS                   &kp  LCTRL    &kp  LALT     &kp  SPACE    &mo  SYM_L             &mo  NUM_L    &kp  SPACE    &kp  LALT     &kp  SLASH                  &kp  RGUI 
                         >;
 
-                        sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp PG_UP PG_DN>;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
                 colemak_layer {
@@ -85,7 +77,7 @@
                             &kp  CAPS                   &kp  LCTRL    &kp  LALT     &kp  SPACE    &mo  SYM_L             &mo  NUM_L    &kp  SPACE    &kp  LALT     &kp  SQT                    &kp  RGUI   
                         >;
 
-                        sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp PG_UP PG_DN>;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
                 sym_layer {
@@ -103,7 +95,7 @@
                             &trans                      &trans        &trans        &trans        &trans                 &mo  ADJ_L    &trans        &trans        &trans                      &kp  RCTRL    
                         >;
 
-                        sensor-bindings = <&rot_kp PG_UP PG_DN &rot_kp C_VOL_UP C_VOL_DN>;
+                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
                 num_layer {
@@ -121,7 +113,7 @@
                             &trans                      &trans        &trans        &trans        &mo ADJ_L              &trans        &trans        &trans      &kp   N0                    &kp   C_PP   
                         >;
 
-                        sensor-bindings = <&rot_kp PG_UP PG_DN &rot_kp C_VOL_UP C_VOL_DN>;
+                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
                 adj_layer {
@@ -139,7 +131,7 @@
                             &trans                      &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans                              &kp  RCTRL   
                         >;
 
-                        sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN &rot_kp PG_UP PG_DN>;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
         };
 };
