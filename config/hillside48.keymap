@@ -104,13 +104,13 @@
  * | F1    |  F2   | Home  |  Up   |  End  |  F10  |-----------------------------------|   /   |   7   |   8   |   9   |   -   | BSPC  |
  * | F3    |  F4   | Left  | Down  | Right |  F11  |-----------------------------------|   *   |   4   |   5   |   6   |   +   | ENTER |
  * | F5    |  F6   |  F7   |  F8   |  F9   |  F12  |  INS  |-------------------| MUTE  |   ,   |   1   |   2   |   3   |   =   | DELETE|
- * ----------------|       |-------|       |       |       | ADJ_L |---|       |       |       |   0   |-------|Play/P |----------------
+ * ----------------|       |-------|       |       |       | ADJ_L |---|       |       |   0   |       |-------|Play/P |----------------
  */
                         bindings = <
 &kp  F1       &kp  F2       &kp  HOME     &kp  UP       &kp  END      &kp  F10                                                                       &kp  SLASH  &kp   N7      &kp   N8      &kp   N9      &kp  MINUS    &trans
 &kp  F3       &kp  F4       &kp  LEFT     &kp  DOWN     &kp  RIGHT    &kp  F11                                                                       &kp  ASTRK  &kp   N4      &kp   N5      &kp   N6      &kp  PLUS     &trans
 &kp  F5       &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F12      &kp INS                                            &kp  C_MUTE   &kp  COMMA  &kp   N1      &kp   N2      &kp   N3      &kp  EQUAL    &kp DEL
-                            &trans                      &trans        &trans        &trans        &mo ADJ_L              &trans        &trans        &trans      &kp   N0                    &kp   C_PP   
+                            &trans                      &trans        &trans        &trans        &mo ADJ_L              &trans        &trans        &kp   N0    &trans                      &kp   C_PP   
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
