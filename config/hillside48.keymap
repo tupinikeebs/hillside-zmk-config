@@ -10,12 +10,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define QWERTY_L 0
-#define DVORAK_L 1
-#define COLEMK_L 2
-#define SYM_L    3
-#define NUM_L    4
-#define ADJ_L    5
+#define QWERTY_L     0
+#define DVORAK_L     1
+#define COLEMK_L     2
+#define SYM_L        3
+#define NUM_L        4
+#define ADJ_L        5
+#define MAC_QWERTY_L 6
 
 #define Undo   LC(Z)
 #define Cut    LC(X)
@@ -38,7 +39,7 @@
 &kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
 &kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  ENTER  
 &kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  LGUI                                          &kp   ESC     &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
-                            &kp  CAPS                   &kp  LCTRL    &kp  LALT     &kp  SPACE    &mo  SYM_L             &mo  NUM_L    &kp  SPACE    &kp  LALT     &kp  SQT                    &kp  C_PP   
+                            &kp  CAPS                   &kp  LCTRL    &kp  LALT     &kp  SPACE    &mo  SYM_L             &mo  NUM_L    &kp  SPACE    &kp  RALT     &kp  SQT                    &kp  C_PP   
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -118,17 +119,35 @@
 
                 adj_layer {
 /* ADJUST
- * -------------------------------------------------------------------------------------------------------------------------------------
- * |       | QWERTY| DVORAK| COLEMK| NUM   |       |-----------------------------------|       |Prt Scr|       | EP_OFF| EP_ON |       |
- * |       | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |       |       |       |       |
- * | BOOTL | RESET |       |OUT_USB|OUT_BLE|       |BT CLR |-------------------|       |       |       |       |       |       | SHIFT |
- * ----------------|       |-------|       |       |       |       |---|       |       |       |       |-------| CTRL  |----------------
+ * ----------------------------------------------------------------------------------------------------------------------------------------
+ * |MAC_QWERTY| QWERTY| DVORAK| COLEMK| NUM   |       |-----------------------------------|       |Prt Scr|       | EP_OFF| EP_ON |       |
+ * |          | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |       |       |       |       |
+ * |   BOOTL  | RESET |       |OUT_USB|OUT_BLE|       |BT CLR |-------------------|       |       |       |       |       |       | SHIFT |
+ * -------------------|       |-------|       |       |       |       |---|       |       |       |       |-------| CTRL  |----------------
  */
                         bindings = <
 &none         &to  QWERTY_L &to  DVORAK_L &to  COLEMK_L &to  NUM_L    &none                                                                             &none             &kp PRINTSCREEN    &none         &ext_power EP_OFF  &ext_power EP_ON &none
 &none         &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &none             &none              &none            &none           &none            &none
 &bootloader   &sys_reset    &none         &out OUT_USB  &out OUT_BLE  &none         &bt BT_CLR                                         &none            &none             &none              &none            &none           &none            &trans
                             &trans                      &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans                              &kp  RCTRL   
+                        >;
+
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                };
+
+                mac_default_layer {
+/* MAC_QWERTY
+ * -------------------------------------------------------------------------------------------------------------------------------------
+ * | `     |   Q   |   W   |   E   |   R   |   T   |-----------------------------------|   Y   |   U   |   I   |   O   |   P   | BKSPC |
+ * | TAB   |   A   |   S   |   D   |   F   |   G   |-----------------------------------|   H   |   J   |   K   |   L   |   ;   | ENTER |
+ * | SHIFT |   Z   |   X   |   C   |   V   |   B   | ALT   |-------------------|  ESC  |   N   |   M   |   ,   |   .   |   /   | SHIFT |
+ * ----------------| CAPS  |-------|  CTRL |  CMD  | SPACE |  Sym  |---|  Num  | SPACE |  ALT  |   '   |-------|Play/P |----------------
+ */
+                        bindings = <
+&kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
+&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  ENTER  
+&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  LALT                                          &kp   ESC     &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
+                            &kp  CAPS                   &kp  LCTRL    &kp  LCMD     &kp  SPACE    &mo  SYM_L             &mo  NUM_L    &kp  SPACE    &kp  RALT     &kp  SQT                    &kp  C_PP   
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
