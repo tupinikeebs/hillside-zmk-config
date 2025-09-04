@@ -40,9 +40,9 @@
             key-positions = <43 9>;
         };
 
-        cao {
+        f2 {
             bindings = <&kp F2>;
-            key-positions = <43 26>;
+            key-positions = <43 27>;
         };
 
         cedilha2 {
