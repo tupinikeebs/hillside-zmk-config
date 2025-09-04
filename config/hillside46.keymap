@@ -41,7 +41,7 @@
         };
 
         cao {
-            bindings = <&cao>;
+            bindings = <&kp F2>;
             key-positions = <43 26>;
         };
 
@@ -50,19 +50,9 @@
             key-positions = <27 43>;
         };
 
-        tilde_a2 {
-            bindings = <&tilde_a>;
-            key-positions = <13 40>;
-        };
-
         tilde_o2 {
             bindings = <&tilde_o>;
             key-positions = <9 40>;
-        };
-
-        cao2 {
-            bindings = <&cao>;
-            key-positions = <26 40>;
         };
 
         enter {
